@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import { Login, Register } from "../index";
+import { Login, Register } from "../index";
 import "./AuthTabs.scss";
 import backgroundImage from "../../../assets/images/background.jpg";
 
@@ -9,7 +9,7 @@ const AuthTabs = () => {
   return (
     <>
       <div
-        className="container-wrapper"
+        className="containerwrapper"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <div className="environment">DEV</div>
@@ -31,10 +31,10 @@ const AuthTabs = () => {
                 </li>
               </ul>
               {type === "Sign In" && (
-                <div className="tab-item">{/* <Login /> */}</div>
+                <div className="tab-item">{<Login />}</div>
               )}
               {type === "Sign Up" && (
-                <div className="tab-item">{/* <Register /> */}</div>
+                <div className="tab-item">{<Register />}</div>
               )}
             </div>
           </div>

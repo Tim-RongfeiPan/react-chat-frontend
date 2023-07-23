@@ -1,5 +1,5 @@
 {
-  "name": "chatty",
+  "name": "React-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,6 +14,7 @@
     "lodash": "^4.17.21",
     "millify": "^5.0.0",
     "msw": "^0.44.2",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-app-rewired": "^2.2.1",
     "react-contenteditable": "^3.3.6",
