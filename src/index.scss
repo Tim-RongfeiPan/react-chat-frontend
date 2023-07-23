@@ -95,23 +95,7 @@ p {
   line-height: 1;
 }
 
-.alerts {
-  padding: 0.5rem 1.25rem;
-  border-radius: 0.25rem;
-  margin-bottom: 1rem;
-}
 
-.alert-error {
-  background-color: var(--red-7);
-  border-color: var(--red-8);
-  color: var(--red-6);
-}
-
-.alert-success {
-  color: var(--green-1);
-  background-color: var(--green-2);
-  border-color: var(--green-3);
-}
 
 .message-loading {
   background-color: var(--white-19);

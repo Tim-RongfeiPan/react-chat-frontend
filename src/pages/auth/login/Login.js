@@ -84,11 +84,11 @@ const Login = () => {
               value={keepLoggedIn}
               handleChange={() => setKeepLoggedIn(!keepLoggedIn)}
             />
-            Keep me signed in
+            Remember me
           </label>
         </div>
         <Button
-          label={`${loading ? "SIGNIN IN PROGRESS..." : "SIGNIN"}`}
+          label={`${loading ? "Sign In in Progress..." : "Sign In"}`}
           className="auth-button button"
           disabled={!username || !password}
         />

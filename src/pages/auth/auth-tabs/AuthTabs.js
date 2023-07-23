@@ -9,7 +9,7 @@ const AuthTabs = () => {
   return (
     <>
       <div
-        className="containerwrapper"
+        className="container-wrapper"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <div className="environment">DEV</div>

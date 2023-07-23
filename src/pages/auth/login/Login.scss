@@ -1,3 +1,30 @@
+.auth-inner {
+  width: 450px;
+  min-height: 380px;
+  margin: auto;
+  background: var(--white-1);
+  padding: 40px 55px 45px;
+  transition: all 0.3s;
+}
+
+.alerts {
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.alert-error {
+  background-color: var(--red-7);
+  border-color: var(--red-8);
+  color: var(--red-6);
+}
+
+.alert-success {
+  color: var(--green-1);
+  background-color: var(--green-2);
+  border-color: var(--green-3);
+}
+
 .auth-form {
   .form-input-container {
     margin-bottom: 20px;
