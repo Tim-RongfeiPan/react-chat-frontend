@@ -1,20 +1,6 @@
 .auth-form {
   .form-input-container {
     margin-bottom: 20px;
-
-    .checkmark-container {
-      display: flex;
-      align-items: baseline;
-      font-size: 14px;
-      cursor: pointer;
-      user-select: none;
-
-      input {
-        margin-right: 10px;
-        cursor: pointer;
-      }
-    }
-
     .error {
       border: 1px solid var(--error);
     }
@@ -41,21 +27,5 @@
   a {
     color: inherit;
     text-decoration: none;
-  }
-
-  .forgot-password {
-    display: flex;
-    padding-top: 10px;
-    cursor: pointer;
-    justify-content: flex-end;
-
-    .arrow-right {
-      margin-left: 2px;
-      margin-top: 2px;
-    }
-
-    &:hover {
-      color: var(--primary-1);
-    }
   }
 }
