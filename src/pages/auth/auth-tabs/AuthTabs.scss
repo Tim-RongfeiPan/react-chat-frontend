@@ -32,17 +32,17 @@
   }
 
   &-auth {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: left;
+    // display: flex;
+    // justify-content: center;
+    // flex-direction: column;
+    // text-align: left;
 
     .tabs {
-      margin: 30px auto;
-      max-width: 500px;
+      // margin: 30px;
+      // max-width: 500px;
       overflow: hidden;
-      position: relative;
-      padding: 0;
+      // position: relative;
+      // padding: 0;
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
@@ -50,8 +50,8 @@
 
       .tab-group {
         list-style: none;
-        padding: 0;
-        margin: 0;
+        // padding: 0;
+        // margin: 0;
 
         .tab button {
             background: var(--gray-10);
@@ -70,15 +70,15 @@
           display: block;
           text-decoration: none;
           padding: 15px;
-          background: var(--white-1);
-          color: var(--gray-1);
+          // background: var(--white-1);
+          // color: var(--gray-1);
           font-size: 20px;
           float: left;
           width: 50%;
           border: none;
-          text-align: center;
-          border-top: 3px solid transparent;
-          transition: all 0.4s ease-in-out;
+          // text-align: center;
+          // border-top: 3px solid transparent;
+          // transition: all 0.4s ease-in-out;
         }
       }
 
