@@ -2,9 +2,15 @@ import { useState, useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import Input from "@components/input/Input";
 import Button from "@components/button/Button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { authService } from "@services/api/auth/auth.service";
+
 import "./Login.scss";
+
+import { useDispatch } from "react-redux";
+import useLocalStorage from "@hooks/useLocalStorage";
+import { Utils } from "@services/utils/utils.service";
+import useSessionStorage from "@hooks/useSessionStorage";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -15,6 +21,12 @@ const Login = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [alertType, setAlertType] = useState("");
   const [user, setUser] = useState();
+  const navigate = useNavigate();
+
+  const dispatch = useDispatch();
+  const [setStoredUsername] = useLocalStorage("username", "set");
+  const [setLoggedIn] = useLocalStorage("keepLoggedIn", "set");
+  const [pageReload] = useSessionStorage("pageReload", "set");
 
   const loginUser = async (event) => {
     setLoading(true);
@@ -27,10 +39,12 @@ const Login = () => {
       // 1 - set logged in to true in local storage
       // 2 - set username in local storage
       // 3 - dispatch user to redux
-      setUser(result.data.user);
-      setKeepLoggedIn(keepLoggedIn);
+      // setUser(result.data.user);
+      setLoggedIn(keepLoggedIn);
+      setStoredUsername(username);
       setHasError(false);
       setAlertType("alert-success");
+      Utils.dispatchUser(result, pageReload, dispatch, setUser);
     } catch (error) {
       setLoading(false);
       setHasError(true);
@@ -42,10 +56,10 @@ const Login = () => {
   useEffect(() => {
     if (loading && !user) return;
     if (user) {
-      console.log("Navigate to streams page from login page");
+      navigate("/app/social/streams");
       setLoading(false);
     }
-  }, [loading, user]);
+  }, [loading, user, navigate]);
 
   return (
     <div className="auth-inner">
