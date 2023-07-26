@@ -93,14 +93,14 @@ const ResetPassword = () => {
                   <Button
                     label={`${
                       loading
-                        ? "RESET PASSWORD IN PROGRESS..."
-                        : "RESET PASSWORD"
+                        ? "Reset Password in Progress..."
+                        : "Reset Password"
                     }`}
                     className="auth-button button"
                     disabled={!password || !confirmPassword}
                   />
 
-                  <Link to={"/"}>
+                  <Link to={"/"} className="forgot-link">
                     <span className="login">
                       <FaArrowLeft className="arrow-left" /> Back to Login
                     </span>

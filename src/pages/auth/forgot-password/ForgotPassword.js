@@ -78,14 +78,14 @@ const ForgotPassword = () => {
                   <Button
                     label={`${
                       loading
-                        ? "FORGOT PASSWORD IN PROGRESS..."
-                        : "FORGOT PASSWORD"
+                        ? "Forgot Password in Progress..."
+                        : "Forgot Password"
                     }`}
                     className="auth-button button"
                     disabled={!email}
                   />
 
-                  <Link to={"/"}>
+                  <Link to={"/"} className="forgot-link">
                     <span className="login">
                       <FaArrowLeft className="arrow-left" /> Back to Login
                     </span>

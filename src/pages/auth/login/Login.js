@@ -42,7 +42,7 @@ const Login = () => {
   useEffect(() => {
     if (loading && !user) return;
     if (user) {
-      console.log("navigate to streams page from login page");
+      console.log("Navigate to streams page from login page");
       setLoading(false);
     }
   }, [loading, user]);
