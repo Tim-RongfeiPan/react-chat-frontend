@@ -5,8 +5,7 @@ const useChatScrollToBottom = (prop) => {
 
   useEffect(() => {
     if (scrollRef.current) {
-      scrollRef.current.scrollTop =
-        scrollRef.current?.scrollHeight - scrollRef.current?.clientHeight;
+      scrollRef.current.scrollTop = scrollRef.current?.scrollHeight - scrollRef.current?.clientHeight;
     }
   }, [prop]);
 

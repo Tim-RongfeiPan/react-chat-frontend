@@ -21,7 +21,7 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: "DM Sans", sans-serif;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: var(--white-10);
   position: fixed;
@@ -62,7 +62,6 @@ p {
 .followers,
 .following,
 .people,
-.videos,
 .photos {
   max-width: 1152px;
   margin: auto;

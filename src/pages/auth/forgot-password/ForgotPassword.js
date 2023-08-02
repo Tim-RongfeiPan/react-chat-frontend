@@ -33,16 +33,10 @@ const ForgotPassword = () => {
   };
 
   return (
-    <div
-      className="container-wrapper"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
+    <div className="container-wrapper" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <div className="environment">DEV</div>
       <div className="container-wrapper-auth">
-        <div
-          className="tabs forgot-password-tabs"
-          style={{ height: `${responseMessage ? "300px" : ""}` }}
-        >
+        <div className="tabs forgot-password-tabs" style={{ height: `${responseMessage ? "300px" : ""}` }}>
           <div className="tabs-auth">
             <ul className="tab-group">
               <li className="tab">
@@ -57,10 +51,7 @@ const ForgotPassword = () => {
                     {responseMessage}
                   </div>
                 )}
-                <form
-                  className="forgot-password-form"
-                  onSubmit={forgotPassword}
-                >
+                <form className="forgot-password-form" onSubmit={forgotPassword}>
                   <div className="form-input-container">
                     <Input
                       id="email"
@@ -76,11 +67,7 @@ const ForgotPassword = () => {
                     />
                   </div>
                   <Button
-                    label={`${
-                      loading
-                        ? "Forgot Password in Progress..."
-                        : "Forgot Password"
-                    }`}
+                    label={`${loading ? "Forgot Password in Progress..." : "Forgot Password"}`}
                     className="auth-button button"
                     disabled={!email}
                   />

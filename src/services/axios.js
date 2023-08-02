@@ -1,6 +1,21 @@
 import axios from "axios";
+export let BASE_ENDPOINT = "";
 
-const BASE_URL = `${process.env.REACT_APP_BASE_ENDPOINT}/api/v1`;
+// when developing locally, change this value to local
+// export const APP_ENVIRONMENT = "local";
+export const APP_ENVIRONMENT = `${process.env.REACT_APP_ENVIRONMENT}`;
+
+if (APP_ENVIRONMENT === "local") {
+  BASE_ENDPOINT = `${process.env.REACT_APP_BASE_ENDPOINT}`;
+} else if (APP_ENVIRONMENT === "development") {
+  BASE_ENDPOINT = "https://api.dev.backenddomain";
+} else if (APP_ENVIRONMENT === "staging") {
+  BASE_ENDPOINT = "https://api.stg.backenddomain";
+} else if (APP_ENVIRONMENT === "production") {
+  BASE_ENDPOINT = "https://api.backenddomain";
+}
+
+const BASE_URL = `${BASE_ENDPOINT}/api/v1`;
 
 export default axios.create({
   baseURL: BASE_URL,

@@ -21,10 +21,7 @@ const ResetPassword = () => {
     event.preventDefault();
     try {
       const body = { password, confirmPassword };
-      const response = await authService.resetPassword(
-        searchParams.get("token"),
-        body
-      );
+      const response = await authService.resetPassword(searchParams.get("token"), body);
       setLoading(false);
       setPassword("");
       setConfirmPassword("");
@@ -40,16 +37,10 @@ const ResetPassword = () => {
   };
 
   return (
-    <div
-      className="container-wrapper"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
+    <div className="container-wrapper" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <div className="environment">DEV</div>
       <div className="container-wrapper-auth">
-        <div
-          className="tabs reset-password-tabs"
-          style={{ height: `${responseMessage ? "400px" : ""}` }}
-        >
+        <div className="tabs reset-password-tabs" style={{ height: `${responseMessage ? "400px" : ""}` }}>
           <div className="tabs-auth">
             <ul className="tab-group">
               <li className="tab">
@@ -91,11 +82,7 @@ const ResetPassword = () => {
                     />
                   </div>
                   <Button
-                    label={`${
-                      loading
-                        ? "Reset Password in Progress..."
-                        : "Reset Password"
-                    }`}
+                    label={`${loading ? "Reset Password in Progress..." : "Reset Password"}`}
                     className="auth-button button"
                     disabled={!password || !confirmPassword}
                   />

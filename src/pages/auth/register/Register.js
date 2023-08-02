@@ -31,10 +31,7 @@ const Register = () => {
     event.preventDefault();
     try {
       const avatarColor = Utils.avatarColor();
-      const avatarImage = Utils.generateAvatar(
-        username.charAt(0).toUpperCase(),
-        avatarColor
-      );
+      const avatarImage = Utils.generateAvatar(username.charAt(0).toUpperCase(), avatarColor);
       const result = await authService.signUp({
         username,
         email,
@@ -42,7 +39,6 @@ const Register = () => {
         avatarColor,
         avatarImage
       });
-      console.log(result);
 
       // 1 - set logged in to true in local storage
       // 2 - set username in local storage
@@ -63,7 +59,7 @@ const Register = () => {
     if (loading && !user) return;
     if (user) {
       console.log("navigate to streams page");
-      navigate("/app/social/steams");
+      navigate("/app/social/streams");
       setLoading(false);
     }
   }, [loading, user, navigate]);

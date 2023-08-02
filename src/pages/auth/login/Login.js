@@ -39,7 +39,7 @@ const Login = () => {
       // 1 - set logged in to true in local storage
       // 2 - set username in local storage
       // 3 - dispatch user to redux
-      // setUser(result.data.user);
+      setUser(result.data.user);
       setLoggedIn(keepLoggedIn);
       setStoredUsername(username);
       setHasError(false);
