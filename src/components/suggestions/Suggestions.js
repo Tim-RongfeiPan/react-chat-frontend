@@ -29,7 +29,7 @@ const Suggestions = () => {
 
   useEffect(() => {
     setUsers(suggestions?.users);
-    console.log(users);
+    // console.log(users);
   }, [suggestions, users]);
 
   return (

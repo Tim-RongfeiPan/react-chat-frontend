@@ -202,7 +202,7 @@ const BackgroundHeader = ({
                     }
                   }}
                   handleChange={(event) => {
-                    console.log(event.target.files[0]);
+                    // console.log(event.target.files[0]);
                     setSelectedBackground(URL.createObjectURL(event.target.files[0]));
                     selectedFileImage(event.target.files[0], "background");
                   }}

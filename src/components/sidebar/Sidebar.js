@@ -92,7 +92,7 @@ const Sidebar = () => {
     if (chatPageName === "Chat") {
       const url = createChatUrlParams("/app/social/chat/messages");
       navigate(url);
-      console.log(url);
+      // console.log(url);
       if (chatList.length && !chatList[0].isRead) {
         markMessagesAsRad(chatList[0]);
       }

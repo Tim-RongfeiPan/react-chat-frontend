@@ -99,7 +99,7 @@ const Profile = () => {
   const addImage = async (result, type) => {
     try {
       const url = type === "background" ? "/images/background" : "/images/profile";
-      console.log(result);
+      // console.log(result);
       const response = await imageService.addImage(url, result);
       if (response) {
         Utils.dispatchNotification(response.data.message, "success", dispatch);
